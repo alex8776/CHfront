@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusHub</title>
+    <style>
+    /* Reset de base et centrage (parties inchangées) */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        min-height: 100vh; 
+    }
+
+    /* Styles par défaut (pour les grands écrans/desktop) */
+    img {
+        max-width: 80%;      
+        height: auto; 
+        /* Hauteur maximale pour Desktop */
+        max-height: 500px;   
+        
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    /* --- MEDIA QUERY : Pour les écrans de 600px de large ou moins --- */
+    @media screen and (max-width: 600px) {
+        img {
+            /* Nouvelle hauteur maximale réduite pour mobile */
+            max-height: 250px; /* Vous pouvez ajuster cette valeur */
+            max-width: 90%; /* On peut même augmenter un peu la largeur */
+        }
+    }
+    /* ---------------------------------------------------------------- */
+
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: scale(0.9); }
+        100% { opacity: 1; transform: scale(1); }
+    }
+</style>
+</head>
+<body>
+    <img src="./images/logo.png" alt="logo CampusHub">
+</body>
+<script>
+    // Une seule redirection suffit
+    window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            window.location.href = "./Home/home.html";
+        }, 3000); // Redirection après 3 secondes
+    });
+</script>
+</html>
