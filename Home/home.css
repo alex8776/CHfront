@@ -150,36 +150,84 @@ button{
 }
 
 @media screen and (max-width: 768px){
+    body{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .barre_du_haut{
+        height: 30px;
+        width: 80%;
+        margin-left: 70px;
+    }
+    .logo{
+        height: 56px;
+        width: auto;
+        position: absolute;
+        top: 0px;
+        left: 15px;
+        animation: fadeln 4s ;
+    }
     .fille{
         height: 500px;
         right: 70px;
-        bottom:-50px;
+        bottom:-40px;
     }
 
     .bouttons{
-        display: none;
+        display: flex;
+        height: 80px;
+        width: 500px;
+        flex-direction: row;
+        margin-left: 100px;
+        gap: 100px;
+    }
+    .Log{
+        width: 100px;
+    }
+    
+    .Sign{
+        width: 100px;
     }
 
     .home, .About{
-        display: none;
+        display: flex;
+        font-size: 15px;
+        position: absolute;
+        top: -2px;
+
+    }
+    .home{
+        margin-left: 25vw;
+    }
+    .About{
+        margin-left: 40vw;
     }
 
     .textes{
         position: absolute;
         margin-left: 10px;
-        margin-top: 70px;
+        margin-top: 20px;
+        width: 200px;
+        text-align: center;
     }
 
     .cercle{
         width: 270px;
         height: 270px;
         margin-left: 25%;
-        margin-top: 40%;
+        margin-top: 45%;
         justify-content: center;
         align-items: center;
     }
     h3{
-        font-size: 20px;
+        font-size: 15px;
         line-height: 20px;
+        width: 200px;
+        display: flex;
+        margin-left: 130px;
+    }
+    .p{
+        font-size: 11px;
+        margin-top: -5px;
     }
 }
