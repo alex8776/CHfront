@@ -95,7 +95,6 @@ h3{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
     animation: slide 3s ;
 }
 .p{
@@ -149,28 +148,39 @@ button{
 
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 480px){
     body{
         overflow-y: hidden;
         overflow-x: hidden;
+        display: flex;
+        height: 100vh;
+        width: 100vw;
     }
     .barre_du_haut{
         height: 30px;
         width: 80%;
-        margin-left: 70px;
+        margin-left: 15vw;
+    }
+    .main{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2vh;
     }
     .logo{
         height: 56px;
         width: auto;
         position: absolute;
         top: 0px;
-        left: 15px;
+        left: 1vw;
         animation: fadeln 4s ;
     }
     .fille{
-        height: 500px;
-        right: 70px;
-        bottom:-40px;
+        height: 70vh;
+        bottom:0;
+        position: absolute;
+        left: 1vw;
     }
 
     .bouttons{
@@ -204,20 +214,19 @@ button{
     }
 
     .textes{
-        position: absolute;
-        margin-left: 10px;
-        margin-top: 20px;
+        max-height: 5vh;
         width: 200px;
         text-align: center;
+        margin-left: -7vw;
+        margin-top: 5vh;
     }
 
     .cercle{
         width: 270px;
         height: 270px;
-        margin-left: 25%;
-        margin-top: 45%;
+        display: flex;
+        margin-top: 25vh;
         justify-content: center;
-        align-items: center;
     }
     h3{
         font-size: 15px;

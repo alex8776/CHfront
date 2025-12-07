@@ -17,15 +17,11 @@ async function verifyToken() {
 
         if (response.ok) {
           const user = await response.json();
-          const statut = document.getElementById("stat");
-         statut.innerText = "Online";
-         statut.style.color ="#9ed70098";
-         const photoProfil = document.getElementById("photoProfil");
-         photoProfil.style.border =" solid #9ed70098  2px";
-         const nom = document.getElementById("Nom");
-         nom.innerText = user.nom;
+          alert("bienvenu étudiant : "+  `${user.noms}` );
+          const nom = document.getElementById("user");
+          nom.textContent = user.noms ;
 
-         return user ;
+          return user ;
         } else {
           alert("Token expiré ou invalide !");
           localStorage.removeItem("token");
@@ -78,9 +74,13 @@ document.getElementById("sendPost").addEventListener("click", (e) => {
   timeElem.style.alignSelf = "flex-end";
   timeElem.style.color = "#555";
 
+  const Sender = document.createElement("h1");
+  Sender.textContent = verifyToken.nom;
+
   // Ajouter le texte et l'heure à la div
   newMsg.appendChild(contentElem);
   newMsg.appendChild(timeElem);
+  newMsg.appendChild(Sender);
 
   // Afficher le conteneur si caché
   msgMain.style.display = "flex";
